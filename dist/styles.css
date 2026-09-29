@@ -117,25 +117,36 @@ details[open]>summary .plus::after{transform:rotate(0)}
 .price-switch input:focus-visible+span{outline:2px solid var(--gold);outline-offset:3px}
 .exam-control{display:flex;align-items:center;gap:12px;cursor:pointer;font-size:.9375rem;color:#dfc6b7}
 .exam-control input{accent-color:var(--gold);width:18px;height:18px;cursor:pointer;margin:0}
-.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.price-card{padding:39px 40px 37px;border:1px solid var(--line);border-radius:2px;background:rgba(0,0,0,.07)}
-.price-early{border-color:rgba(230,190,121,.55);background:rgba(230,190,121,.04)}
-.price-card .eyebrow{font-size:.75rem;letter-spacing:.13em;margin-bottom:12px}
-.price-deadline{font-size:1rem;margin-bottom:27px}
+.price-grid{display:block}
+.price-card{display:grid;grid-template-columns:1fr 1fr;gap:36px 56px;padding:42px;border:1px solid var(--line);border-radius:2px;background:rgba(0,0,0,.07)}
+.price-early{border-color:rgba(230,190,121,.55);background:linear-gradient(130deg,rgba(230,190,121,.075),rgba(230,190,121,.025))}
+.price-active{display:inline-flex;align-items:center;gap:9px;padding:6px 13px;border:1px solid rgba(230,190,121,.5);border-radius:30px;background:rgba(230,190,121,.12);color:#f5d59e;font-size:.8125rem;font-weight:600;margin-bottom:22px}
+.price-active::before{content:'';width:6px;height:6px;background:#f5d59e;border-radius:50%}
+.price-card .eyebrow{font-size:.75rem;letter-spacing:.13em;margin-bottom:10px}
+.price-deadline{font-size:1rem;margin-bottom:18px;color:#e4ccbb}
+.standard-price{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin:0 0 13px;color:#cfb3a6}
+.standard-price s{font-family:var(--serif);font-size:2.3rem;font-weight:400;line-height:1.2;text-decoration-thickness:1.5px;text-decoration-color:#d3b4a5}
+.standard-price>span{font-size:.8125rem;line-height:1.6}
 .price{display:flex;align-items:baseline;gap:6px;margin:0 0 10px;flex-wrap:wrap;line-height:1}
 .price .currency{font-family:var(--serif);font-size:3rem;font-weight:400;color:var(--gold)}
-.price strong{font-family:var(--serif);font-size:5.9rem;font-weight:400;letter-spacing:-.03em;color:var(--gold);line-height:1.05}
-.price-unit{font-size:.875rem;color:#c2a89c;line-height:1.5;margin-left:15px}
-.price-context{font-size:.875rem;color:#c2a89c;margin:0 0 30px}
-.included{padding:23px 0 0;margin:0 0 28px;list-style:none;border-top:1px solid var(--line)}
-.included li{position:relative;padding:5px 0 5px 22px;font-size:.9375rem;color:#d8c3b7}
-.included li::before{content:'✓';color:var(--gold);position:absolute;left:0;font-size:.9rem}
-.price-card .button{width:100%}
-.payment-note{display:grid;grid-template-columns:270px 1fr;gap:40px;margin-top:37px;border-top:1px solid var(--line);padding-top:29px}
-.payment-note>div{display:flex;align-items:center;gap:20px}
-.payment-note strong{font-family:var(--serif);font-size:2.8rem;font-weight:400;color:var(--gold);white-space:nowrap;line-height:1.1}
-.payment-note span{font-size:.875rem;line-height:1.6;color:#c6ad9f}
-.payment-note p{font-size:.875rem;color:#bfa397;line-height:1.8;margin:0}
+.price strong{font-family:var(--serif);font-size:7rem;font-weight:400;letter-spacing:-.03em;color:var(--gold);line-height:1.05}
+.price-unit{font-size:.875rem;color:#dec3b2;line-height:1.5;margin-left:12px}
+.price-context{font-size:.875rem;color:#d2b6a7;margin:0}
+.price-inclusions{padding-top:9px}
+.included-heading{font-size:1.0625rem;font-weight:600;letter-spacing:.02em;color:#f5d59e;margin:0 0 16px}
+.included{padding:0;margin:0;list-style:none}
+.included li{position:relative;padding:17px 0 17px 34px;border-bottom:1px solid var(--line);font-size:1rem;color:var(--paper)}
+.included li::before{content:'✓';position:absolute;left:0;top:17px;color:var(--gold);font-size:1.1rem;font-weight:600}
+.deposit-panel{grid-column:1/-1;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:32px;align-items:center;padding:30px 34px;border:1px solid #ffdfac;border-radius:2px;background:linear-gradient(115deg,#f7dca9,#e6b978);color:var(--wine-deep);box-shadow:0 10px 36px rgba(15,3,7,.18)}
+.deposit-label{font-size:.875rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin:0 0 4px}
+.deposit-price{font-family:var(--serif);font-size:5.3rem;font-weight:500;letter-spacing:-.035em;line-height:1;margin:0 0 9px}
+.deposit-caption{font-size:.875rem;font-weight:600;line-height:1.6;max-width:210px;margin:0}
+.deposit-copy p{font-size:.9375rem;line-height:1.8;color:#51301f;margin:0;max-width:310px}
+.button-deposit{min-width:205px;background:var(--wine-deep);border-color:var(--wine-deep);color:var(--paper)}
+.button-deposit:hover{background:#441c25;border-color:#441c25}
+.button-deposit:focus-visible{outline-color:var(--wine-deep)}
+.payment-note{margin-top:23px}
+.payment-note p{font-size:.875rem;color:#cdb0a1;line-height:1.8;margin:0}
 .group-note{margin:19px 0 0;color:#bfa397;font-size:.875rem;text-align:right}
 .questions{display:grid;grid-template-columns:.9fr 1.3fr;gap:100px}
 .questions-intro{color:#bda59b;font-size:1rem;margin:0 0 20px}
@@ -175,4 +186,17 @@ body.dialog-open{overflow:hidden}
 }
 @media(max-width:420px){
   .brand small{font-size:.75rem;letter-spacing:.12em}.brand>span{font-size:.8rem}.hero .eyebrow{font-size:.75rem;letter-spacing:.06em}.tiny-rule{width:25px;margin-right:10px}.hero-bottom{font-size:.75rem;letter-spacing:0;align-items:flex-start;flex-direction:column;gap:8px}.part-tabs{margin-right:-20px;padding-right:20px;grid-template-columns:repeat(5,160px)}.part-tab{min-height:155px}.program-text h3{font-size:2.4rem}.syllabus summary>span:first-child{gap:10px}.summary-end{gap:12px}.teacher-photo{height:480px}.teacher-photo figcaption{font-size:.75rem;letter-spacing:.03em;left:18px}.teacher-copy h2{font-size:4.2rem}.place-image{height:490px}.place-title h2{font-size:3.6rem}.location-label{font-size:.75rem;letter-spacing:.03em}.gallery-item{height:245px}.gallery-item>span:not(.gallery-open){font-size:.875rem;left:12px}.gallery-open{right:10px}.price-switch span{padding:12px;font-size:.875rem}.price-card{padding-inline:24px}.price-unit{margin-left:4px}.closing h2{font-size:3rem}.footer{font-size:.8125rem}
+}
+
+@media(max-width:1100px){
+  .price-card{gap:30px 36px}.price strong{font-size:5.9rem}.deposit-panel{grid-template-columns:1fr 1fr;gap:22px}.deposit-panel .button{grid-column:1/-1;width:100%;min-width:0}
+}
+@media(max-width:900px){
+  .price-card{grid-template-columns:1fr}.price-inclusions{border-top:1px solid var(--line);padding-top:25px}
+}
+@media(max-width:800px){
+  .price strong{font-size:5.3rem}.deposit-panel{grid-template-columns:1fr;gap:20px;padding:25px}.deposit-price{font-size:4.8rem}.deposit-caption{max-width:none}.deposit-copy p{max-width:none}.payment-note{margin-top:22px}
+}
+@media(max-width:420px){
+  .price-card{padding:28px 20px}.deposit-panel{padding:22px 20px}.deposit-price{font-size:4.5rem}.standard-price{gap:12px}.price-active{font-size:.8125rem}
 }
