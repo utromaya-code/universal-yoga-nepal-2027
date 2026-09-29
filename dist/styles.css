@@ -84,7 +84,7 @@ details[open]>summary .plus::after{transform:rotate(0)}
 .text-link:hover{color:var(--paper)}
 .teacher-copy .text-link:hover{color:var(--ink)}
 .place-image{height:600px;position:relative;isolation:isolate;overflow:hidden}
-.place-image>img{position:absolute;z-index:-3;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 51%}
+.place-image>img{position:absolute;z-index:-3;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 100%}
 .place-image-shade{position:absolute;z-index:-2;inset:0;background:linear-gradient(90deg,rgba(31,14,20,.78),rgba(31,14,20,.07)),linear-gradient(0deg,rgba(31,14,20,.65),transparent 55%)}
 .place-title{position:absolute;left:0;right:0;bottom:66px}
 .place-title h2{font-size:clamp(4rem,6.5vw,6.5rem);margin-bottom:24px}
@@ -115,8 +115,13 @@ details[open]>summary .plus::after{transform:rotate(0)}
 .price-switch span{display:block;padding:13px 22px;border:1px solid transparent;border-radius:2px;font-size:.875rem;color:#c7ada3}
 .price-switch input:checked+span{border-color:rgba(230,190,121,.4);color:var(--gold);background:rgba(230,190,121,.08)}
 .price-switch input:focus-visible+span{outline:2px solid var(--gold);outline-offset:3px}
-.exam-control{display:flex;align-items:center;gap:12px;cursor:pointer;font-size:.9375rem;color:#dfc6b7}
-.exam-control input{accent-color:var(--gold);width:18px;height:18px;cursor:pointer;margin:0}
+.exam-control{display:flex;align-items:center;gap:14px;max-width:100%;min-width:0;padding:15px 18px;border:2px solid #f7dca9;border-radius:3px;background:linear-gradient(115deg,#f7dca9,#e6b978);color:var(--wine-deep);cursor:pointer;box-shadow:0 5px 20px rgba(15,3,7,.15)}
+.exam-control input{accent-color:var(--wine-deep);width:24px;height:24px;flex:0 0 24px;cursor:pointer;margin:0}
+.exam-control:focus-within{outline:3px solid #f7dca9;outline-offset:4px}
+.exam-control input:focus-visible{outline:2px solid var(--wine-deep);outline-offset:3px}
+.exam-control-copy{display:grid;gap:4px;min-width:0}
+.exam-control strong{font-size:1rem;font-weight:700;line-height:1.5}
+.exam-control small{font-size:.8125rem;font-weight:500;line-height:1.55}
 .price-grid{display:block}
 .price-card{display:grid;grid-template-columns:1fr 1fr;gap:36px 56px;padding:42px;border:1px solid var(--line);border-radius:2px;background:rgba(0,0,0,.07)}
 .price-early{border-color:rgba(230,190,121,.55);background:linear-gradient(130deg,rgba(230,190,121,.075),rgba(230,190,121,.025))}
@@ -132,6 +137,8 @@ details[open]>summary .plus::after{transform:rotate(0)}
 .price strong{font-family:var(--serif);font-size:7rem;font-weight:400;letter-spacing:-.03em;color:var(--gold);line-height:1.05}
 .price-unit{font-size:.875rem;color:#dec3b2;line-height:1.5;margin-left:12px}
 .price-context{font-size:.875rem;color:#d2b6a7;margin:0}
+.exam-surcharge{font-size:.9375rem;font-weight:600;line-height:1.6;color:#f5d59e;background:rgba(230,190,121,.12);border:1px solid rgba(230,190,121,.5);border-radius:3px;padding:9px 13px;margin:0 0 12px}
+.exam-surcharge[hidden]{display:none}
 .price-inclusions{padding-top:9px}
 .included-heading{font-size:1.0625rem;font-weight:600;letter-spacing:.02em;color:#f5d59e;margin:0 0 16px}
 .included{padding:0;margin:0;list-style:none}

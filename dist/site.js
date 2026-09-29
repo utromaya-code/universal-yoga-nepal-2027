@@ -73,17 +73,19 @@ window.addEventListener('resize', () => {
   if (index >= 0) selectPart(index, false, false);
 });
 
-// Source prices remain unchanged; toggles expose the four participation options.
+// Early prices use the attendance rate plus the optional $100 certificate exam.
 const attendanceRadios = document.querySelectorAll('input[name="attendance"]');
 const examCheckbox = document.querySelector('#with-exam');
+const examSurcharge = document.querySelector('[data-exam-surcharge]');
 function updatePrices() {
   const repeated = document.querySelector('input[name="attendance"]:checked').value === 'repeat';
   const withExam = examCheckbox.checked;
-  const early = repeated ? (withExam ? 1430 : 1330) : (withExam ? 1680 : 1580);
-  const standard = early + 100;
+  const early = (repeated ? 1330 : 1580) + (withExam ? 100 : 0);
+  const standard = early + 200;
   document.querySelector('#price-early').textContent = String(early);
   document.querySelector('#price-standard').textContent = String(standard);
-  const context = `${repeated ? 'Повторное' : 'Первое'} прохождение · ${withExam ? 'с экзаменом' : 'без экзамена'}`;
+  examSurcharge.hidden = !withExam;
+  const context = `${repeated ? 'Повторное' : 'Первое'} прохождение · ${withExam ? 'с экзаменом на сертификат' : 'без экзамена'}`;
   document.querySelectorAll('[data-price-context]').forEach(item => { item.textContent = context; });
 }
 attendanceRadios.forEach(input => input.addEventListener('change', updatePrices));
